@@ -1,0 +1,52 @@
+.profile{
+  width:800px;
+  margin: auto;
+  margin-top: 100px;
+}
+.profileInfo{
+display: flex;
+align-items: center;
+justify-content:space-around;
+margin: auto;
+border-bottom: 1px solid #aaa;
+height: 250px;
+width:700px;
+
+}
+.friendslinks{
+  display: flex;
+}
+h5{
+  padding: 10px;
+}
+.editProfile{
+  display: flex;
+  align-items: center;
+}
+
+.PicturesContainer{
+  width:700px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;    
+  flex-wrap: wrap;
+}
+.imagebox{
+  padding: 20px;
+  width: 50px;
+  height: 50px;
+  flex-shrink: 3;
+}
+@media screen and (max-width: 800px) {
+    .profileInfo{
+        justify-content:flex-start;
+        width: 500px;
+    }
+    .PicturesContainer{
+      flex-wrap: wrap;
+    
+    }
+  }
+  a{
+    text-decoration: none;
+  }

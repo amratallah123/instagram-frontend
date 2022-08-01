@@ -1,0 +1,12 @@
+.postContainer{
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+@media screen and (max-width: 800px) {
+    .postContainer{
+        width: 85%;
+        transition: .2s;
+    }
+  }

@@ -1,0 +1,57 @@
+.logoImage{
+     width: 100px;
+}
+
+.appBar{
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+}
+
+.inputSearch{
+    background-color: #eee;
+    transition: .2s;
+    border-radius: 5px;
+    margin: 10px;
+}
+.inputSearch:hover{
+    background-color: #d3d3d3;
+    transform: scale(1.05);
+    transition: .2s;
+    width: 400px;
+}
+.inputSearch:focus{
+    background-color: #d3d3d3;
+    transform: scale(1.05);
+    transition: .2s;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+}
+li{
+    margin-left: 10px;
+}
+li:hover{
+    transform: scale(1.1);
+    transition: .2s;
+}
+li:focus{
+    transform: scale(1.1);
+    transition: .2s;
+}
+a{
+    color: #000;
+}
+
+.link{
+    padding-top: 10px;
+}
+
+@media screen and (max-width: 800px) {
+    .search{
+        display: none;
+        transition: .2s;
+    }
+  }

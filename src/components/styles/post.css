@@ -1,0 +1,12 @@
+.post{
+    width: 600px;
+    margin-top: 100px;
+}
+
+@media screen and (max-width: 650px) {
+    .post{
+        width: 300px;
+        margin-right: 0;
+
+    }
+  }
