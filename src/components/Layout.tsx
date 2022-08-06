@@ -36,7 +36,7 @@ const Search = styled('div')(({ theme }) => ({
   }));
   
   const StyledInputBase = styled(InputBase)(({ theme }) => ({
-    color: 'inherit',
+    color: '#696969',
     '& .MuiInputBase-input': {
       padding: theme.spacing(1, 1, 1, 0),
       // vertical padding + font size from searchIcon
@@ -51,7 +51,7 @@ const Search = styled('div')(({ theme }) => ({
   
 export const Layout = () => {
   return (
-    <AppBar color='primary'>
+    <AppBar color='primary' position="sticky">
         <div className='appBar'>
             <Link className='link' to="/"><img   className='logoImage' src={logoImage} alt="logo" /> </Link>
             
@@ -60,7 +60,7 @@ export const Layout = () => {
               <SearchIcon sx={{color:"black"}}/>
             </SearchIconWrapper>
             <StyledInputBase  className='inputSearch'
-              placeholder="Search…"
+              placeholder="Search"
               inputProps={{ 'aria-label': 'search' }}
             />
           </Search>

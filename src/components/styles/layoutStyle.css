@@ -14,12 +14,12 @@
     border-radius: 5px;
     margin: 10px;
 }
-.inputSearch:hover{
+/*.inputSearch:hover{
     background-color: #d3d3d3;
     transform: scale(1.05);
     transition: .2s;
     width: 400px;
-}
+}*/
 .inputSearch:focus{
     background-color: #d3d3d3;
     transform: scale(1.05);

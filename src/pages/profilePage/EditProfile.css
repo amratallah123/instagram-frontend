@@ -1,0 +1,31 @@
+body{
+    background-color: rgb(248, 248, 248);
+}
+.container{
+    display: flex;
+    background-color: white;
+    width: 70%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+.parent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.options{
+    border-right: 1px solid lightgray;
+}
+
+li:hover{
+    transform:none;
+    transition: none;
+    border-left: 2px solid lightgray;
+}
+li{
+    margin-left: 0;
+
+}
+.css-16ac5r2-MuiButtonBase-root-MuiListItemButton-root.Mui-selected{
+    border-left: 2px solid black;
+}

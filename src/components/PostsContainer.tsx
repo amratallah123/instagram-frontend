@@ -7,7 +7,6 @@ export const PostsContainer = () => {
     <div className='postContainer'>
         <Post/>
         <Post/>
-
         <Post/>
         <Post/>
 
