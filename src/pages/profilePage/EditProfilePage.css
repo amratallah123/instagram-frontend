@@ -1,0 +1,33 @@
+form{
+    padding-top: 30px;
+    width:100%;
+
+}
+.rightHand{
+    margin-left: 50px;
+}
+
+.formContent{
+    display: flex;
+    justify-content:end;
+    margin-bottom: 30px;
+}
+input{
+    height: 25px;
+}
+.content{
+    position: relative;
+    left:5%;
+    display:flex;
+    justify-content:start;
+}
+.userBox{
+    display: flex;
+    margin-bottom: 30px;
+    position: relative;
+    left: 20%;
+}
+.button{
+    position: relative;
+    left: 50%;
+}

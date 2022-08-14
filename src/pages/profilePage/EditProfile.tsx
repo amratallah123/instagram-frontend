@@ -3,25 +3,17 @@ import { Avatar, Box, Button, Divider, List, ListItem, ListItemButton, ListItemT
 import React, { useState } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../Redux/Store';
-import avatar from '../../imgs/WhatsApp Image 2022-02-05 at 1.28.24 AM.jpeg';
-import {MyButton} from'../../components/styledButton';
+
 import { editUser } from '../../Redux/Reducers/userSlice';
+import { BrowserRouter, Link, Outlet, Route, Routes } from 'react-router-dom';
+
 const EditProfile = () => {
 
-  const {name} = useSelector((state:RootState)=>state.user.userData);
-  const {userName} = useSelector((state:RootState)=>state.user.userData);
-  const {email} = useSelector((state:RootState)=>state.user.userData);
-  const {phone} = useSelector((state:RootState)=>state.user.userData);
-  const {gender} = useSelector((state:RootState)=>state.user.userData);
+
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const[nameS , setName]=useState(String({name}));
 
-  const dispatch = useDispatch();
 
-  const submit = (e:React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    dispatch(editUser({nameS}));
-}
+
 
   const handleListItemClick = (
     event: React.MouseEvent<HTMLDivElement, MouseEvent>,
@@ -30,7 +22,9 @@ const EditProfile = () => {
     setSelectedIndex(index);
   };
   
-  return <Box className="parent">
+  return (
+  
+  <Box className="parent">
 
     <Box className="container" mt={8}>
       
@@ -41,9 +35,11 @@ const EditProfile = () => {
               selected={selectedIndex === 0}
               onClick={(event) => handleListItemClick(event, 0)}
             >
+              <Link to="EditProfilePage">
               <ListItemText sx={{pl:2,pt:1}}>
                 Edit Profile
               </ListItemText>
+              </Link>
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
@@ -51,9 +47,11 @@ const EditProfile = () => {
               selected={selectedIndex === 1}
               onClick={(event) => handleListItemClick(event, 1)}
             >
+              <Link to="changepassword">
               <ListItemText sx={{pl:2,pt:1}}>
                 Change Password
               </ListItemText>
+              </Link>
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
@@ -137,44 +135,14 @@ const EditProfile = () => {
             </ListItemButton>
           </ListItem>
         </List>
-      </Box>
+      </Box>  
       <Box className='content' flex={6}>
-        <form onSubmit={submit}>
-          <Box className='formContent'>
-            <Stack direction="row">
-              <Avatar src ={avatar}></Avatar>
-              <Typography className="rightHand">{name}</Typography>
-            </Stack>
-          </Box>
-          <Box className='formContent'>
-              <label>Name</label>
-              <input type="text" defaultValue={name} className="rightHand"
-              onChange={(e) => setName(e.target.value)}></input>
-          </Box>
-          <Box className='formContent'>
-              <label>Username</label>
-              <input type="text" defaultValue={userName} className="rightHand"></input>
-          </Box>
-          <Box className='formContent'>
-              <label>Email</label>
-              <input type="text" defaultValue={email} className="rightHand"></input>
-          </Box>
-          <Box className='formContent'>
-              <label>Phone number</label>
-              <input type="text" defaultValue={phone} className="rightHand"></input>
-          </Box>
-          <Box className='formContent'>
-              <label>Gender</label>
-              <input type="text" defaultValue={gender} className="rightHand"></input>
-          </Box>
-          <Box>
-            <MyButton type="submit" >Submit</MyButton>
-          </Box>
-        </form>
+        <Outlet />
       </Box>
     </Box>
+  </Box>
 
-  </Box>;
+  )
 };
 
 export default EditProfile;

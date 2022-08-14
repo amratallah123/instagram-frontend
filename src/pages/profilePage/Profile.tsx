@@ -31,7 +31,7 @@ export const Profile = () => {
         <div>
           <div className="editProfile">
             <h2>Amr Atallah</h2>
-            <Link to="/profile/editprofile">
+            <Link to="/profile/editprofile/EditProfilePage">
               <Button
                 sx={{
                   color: "black",
