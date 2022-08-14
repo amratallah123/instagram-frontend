@@ -29,3 +29,24 @@ li{
 .css-16ac5r2-MuiButtonBase-root-MuiListItemButton-root.Mui-selected{
     border-left: 2px solid black;
 }
+.content{
+    display: flex;
+    justify-content: center;
+}
+form{
+    padding-top: 30px;
+    width:70%;
+
+}
+.rightHand{
+    position: absolute;
+    left: 52%;
+    width: 20%;
+}
+
+.formContent{
+    margin-bottom: 30px;
+}
+input{
+    height: 25px;
+}
